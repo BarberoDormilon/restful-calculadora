@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/calculadora")
 public class CalculadoraController {
 	
-	@GetMapping(path="/{num1}")
-	public String Sumar(@PathVariable String num1) {
-		return "Variable recibida: "+num1;
+	@GetMapping(path="/{num1}/{num2}")
+	public String Sumar(@PathVariable String num1, @PathVariable String num2) {
+		return "La suma es: "+(Integer.parseInt(num1)+Integer.parseInt(num2));
 	}
 
 }
